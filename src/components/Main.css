@@ -1,0 +1,46 @@
+body {
+    display: grid;
+}
+
+
+
+h1 {
+    font-size: 58px;
+    background: linear-gradient(to right, #FC6AFF, #45DEFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+button {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 8px;
+    cursor: pointer;
+}
+
+
+
+
+.dark button {
+    background-color: #0e0e0e;
+}
+
+
+.dark {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+
+.data {
+    margin: 1px;
+}
+
+.geo{
+    display: inline-block;
+
+}
