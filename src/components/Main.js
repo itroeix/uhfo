@@ -1,7 +1,21 @@
 import './Main.css';
 
 import React, { useState } from "react";
-
+/*
+            {isLoading ? (
+                <h1>Loading...</h1>
+            ) : (
+                <div class="info">
+                    <h2>IP info</h2>
+                    <h5 class="data">{data.ip}</h5><br />
+                    <h5 class="data">{data.city}, {data.region} ({data.region_code}), {data.country_name} ({data.country_code})</h5><br />
+                    <h5 class="data">Lat: {data.latitude}, Long: {data.longitude}</h5>< br />
+                    <h5 class="data">Postal: {data.postal}</h5><br />
+                    <h5 class="data">{data.org}</h5> <br />
+                    <h5 class="data">Timezone: {data.timezone}</h5>
+                </div>
+            )}
+*/
 
 const Main = () => {
 
@@ -42,6 +56,7 @@ const Main = () => {
     }, [darkMode]);
     
     // Get IP info with a third-party API
+    /*
     React.useEffect(() => {
         const url = `https://ipapi.co/json/`;
         fetch(url)
@@ -49,7 +64,7 @@ const Main = () => {
             .then((json) => setData(json))
             .catch((error) => setData(error));
     }, []);
-
+    */
     // Fetch loading
     React.useEffect(() => {
         if (data.length !== 0) {
@@ -86,19 +101,9 @@ const Main = () => {
             </div>
 
 
-            {isLoading ? (
-                <h1>Loading...</h1>
-            ) : (
-                <div class="info">
-                    <h2>IP info</h2>
-                    <h5 class="data">{data.ip}</h5><br />
-                    <h5 class="data">{data.city}, {data.region} ({data.region_code}), {data.country_name} ({data.country_code})</h5><br />
-                    <h5 class="data">Lat: {data.latitude}, Long: {data.longitude}</h5>< br />
-                    <h5 class="data">Postal: {data.postal}</h5><br />
-                    <h5 class="data">{data.org}</h5> <br />
-                    <h5 class="data">Timezone: {data.timezone}</h5>
-                </div>
-            )}
+
+
+
             <h2>Components</h2>
             <h5>{graph}</h5>
             <h5>{resolution}</h5>
